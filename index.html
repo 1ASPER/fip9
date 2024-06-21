@@ -8,7 +8,8 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.45s, color 0.3s;
+            font-family: 'Arial', sans-serif;
         }
 
         .dark-theme {
@@ -42,6 +43,34 @@
         .theme-toggle {
             cursor: pointer;
         }
+
+        .content-section {
+            padding: 40px 0;
+        }
+
+        .advantages-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .advantages-list li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .advantages-list li::before {
+            content: "✔";
+            margin-right: 10px;
+            color: green;
+        }
+
+        .footer {
+            background-color: #00bfff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
     </style>
 </head>
 
@@ -55,17 +84,17 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link theme-toggle" onclick="toggleTheme()">Theme</a>
+                    <a class="nav-link theme-toggle" onclick="toggleTheme()">Тема</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <div class="container">
-        <div class="row">
+        <div class="row content-section">
             <div class="col-12">
-                <h1 class="text-center">Welcome!</h1>
-                <p class="text-center">Our project provides an SRM system to solve a complex problem within the framework of the IDEATHON event</p>
+                <h1 class="text-center">Добро пожаловать!</h1>
+                <p class="text-center lead">Наш проект предоставляет систему SRM для решения сложной проблемы в рамках мероприятия IDEATHON.</p>
             </div>
         </div>
 
@@ -76,7 +105,33 @@
                     allowfullscreen></iframe>
             </div>
         </div>
+
+        <div class="row content-section">
+            <div class="col-12">
+                <h2 class="text-center">Описание проекта</h2>
+                <p class="text-center">Смарт расписание - это инновационное решение для упрощения и автоматизации взаимодействия между компаниями и их клиентами. Наша платформа позволяет эффективно планировать встречи, управлять расписанием и оптимизировать время как для бизнеса, так и для клиентов.</p>
+            </div>
+        </div>
+
+        <div class="row content-section">
+            <div class="col-12">
+                <h2 class="text-center">Преимущества</h2>
+                <ul class="advantages-list">
+                    <li>Автоматическое назначение встреч</li>
+                    <li>Напоминания и уведомления</li>
+                    <li>Интеграция с календарями</li>
+                    <li>Персонализированный интерфейс</li>
+                    <li>Аналитика и отчеты</li>
+                </ul>
+            </div>
+        </div>
     </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="mb-0">© 2024 FIP9-team. Все права защищены.</p>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
